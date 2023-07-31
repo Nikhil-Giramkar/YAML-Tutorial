@@ -1,0 +1,40 @@
+#Strings can be represented in following ways
+name: Nikhil Giramkar
+fruit: "Apple"
+job: 'SWE'
+
+#Multi-line strings can be written using |
+bio: |
+This is me, Nukhil Giramkar.
+This is second line of my bio.
+
+# Writing multple lines but convert to single line when deserialized, we use >
+message: >
+this will
+all come in
+single line.
+
+
+ID: 2345
+marks: 23.678
+isGraduated: No #n, N, false, False, FALSE
+#same for true
+
+#Yaml can automatically detect types but you can also specify it
+positiveNum: !!int 987
+negativeNum: !!int -9982
+oneLakh: !!int +100_000
+
+marks: !!float 123.432
+infinite: !!float .inf
+not a num: .nan 
+isBoy: !!bool Yes
+myStr: !!str "IS string"
+
+surname: !!null Null
+
+#dates and time
+myTuime: !!timestamp 2002-12-14
+#and so on..
+...
+
