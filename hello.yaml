@@ -1,0 +1,22 @@
+#Data in Yaml can be stored as key value pair, lists or blocks
+
+"apple": "This is a red fruit"
+1: "First roll number"
+---
+#lists 
+- china
+- usa
+- russia
+- india
+---
+#Blocks - be careful with spaces
+cities:
+ - New Delhi
+ - Pune
+ - Gurgaon
+---
+#Blocks can be also written like this
+cities: [New Delhi, Pune, Mumbai]
+
+#to mark the end of yaml file we use ...
+...
