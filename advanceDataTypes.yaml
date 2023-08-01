@@ -1,0 +1,86 @@
+student: !!seq
+ - name
+ - rollNo
+ - marks
+
+# can be written as:
+cities: [New Delhi, Pune, Mumbai]
+
+#some of the keys f seq can be empty, they are sparse sequences
+sparse_seq: 
+ - hello
+ - hi
+ - 
+ - how
+ - Null
+ - wassup
+---
+#nested sequences
+-
+ - mango
+ - chickoo
+ - "Apple"
+-
+  - Pune
+  - Banglore
+  - Mumbai
+---
+#maps
+
+name: Nikhil
+role:
+  age: 99
+  marks: 100
+
+#pairs can have duplicate values
+pair_example: !!pairs
+ - job: student
+ - job: Engineer
+ - job: Teacher
+
+#set has only unique values
+names: !!set
+ ? Nikhil
+ ? Rehan
+ ? Shubham
+ ? Rupesh
+
+# dictionary - omap
+People: !!omap
+ - Nikhil:
+     age: 23
+     hair: black
+     height: 178
+ - Rehan:
+     age: 45
+     hair: blonde
+     height: 156
+
+# We can re-use some properties, to avoid repititve code
+
+job: &corporateInfo #here we add a reference name
+ company: ABC Pvt Ltd.
+ role: Software Engineer
+
+person1:
+ name: Nikhil
+ <<: *corporateInfo
+
+ #this will look like:
+#  person1:
+#  name: Nikhil
+#  company: ABC Pvt Ltd.
+#  role: Software Engineer
+
+# we can also override the properties from reusable ones
+person2:
+  name: Rehan 
+  <<: *corporateInfo
+  role: Software Developer
+
+   #this will look like:
+#  person1:
+#  name: Nikhil
+#  company: ABC Pvt Ltd.
+#  role: Software Developer
+

@@ -1,0 +1,30 @@
+School: 
+ name: PPS
+ principal: Someone
+ Students:
+  - rollNo: 1
+    name: Nikhil
+    marks: 100
+  - rollNo: 2
+    name: Ansh
+    marks: 78
+
+# JSON format:
+# {
+#   "School": {
+#     "name": "PPS",
+#     "principal": "Someone",
+#     "Students": [
+#       {
+#         "rollNo": 1,
+#         "name": "Nikhil",
+#         "marks": 100
+#       },
+#       {
+#         "rollNo": 2,
+#         "name": "Ansh",
+#         "marks": 78
+#       }
+#     ]
+#   }
+# }
